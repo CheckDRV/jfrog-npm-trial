@@ -1,0 +1,26 @@
+name: Create and Upload Artifact
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Create artifact content
+      run: |
+        echo "This is the content of my artifact." > my_artifact.txt
+        mkdir -p my_output_folder
+        echo "Another file in a folder." > my_output_folder/another_file.txt
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: my-build-artifact
+        path: |
+          my_artifact.txt
+          my_output_folder/
+        retention-days: 7 # Optional: define how long the artifact should be retained
