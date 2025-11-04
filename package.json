@@ -1,6 +1,6 @@
 {
   "name": "jfrog-npm-trial",
-  "version": "1.0.0",
+  "version": "0.0.0-1762208560165",
   "description": "",
   "repository": {
     "type": "git",
@@ -11,5 +11,18 @@
   "homepage": "https://github.com/jfrog/jfrog-npm-trial#readme",
   "dependencies": {
     "jfrog-trial-sum-example": "1.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://trialib1h95.jfrog.io/artifactory/api/npm/demo-npm/"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "check-dependencies": "^1.1.1",
+    "check-internet-connected": "^2.0.6",
+    "clarinet": "^0.12.6",
+    "colors": "1.4.0",
+    "compression": "^1.7.4",
+    "config": "^3.3.12",
+    "cookie-parser": "^1.4.6"
   }
 }
